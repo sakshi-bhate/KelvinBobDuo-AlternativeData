@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import TrialForm from './TrialForm';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <TrialForm/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
