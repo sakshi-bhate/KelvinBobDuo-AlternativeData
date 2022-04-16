@@ -1,22 +1,35 @@
 from django.db import models
 from phone_field import PhoneField
+from django.contrib.auth.models import User
 
 # Create your models
-class Registereduser(models.Model):
-    email=models.EmailField(primary_key=True,max_length=254)
-    name=models.CharField(max_length=254)
-    phone=PhoneField(help_text="business-registered phone number")
-
-    def __str__(self):
-        return self.email
-
 class LoggedInUser(models.Model):
-    email=models.ForeignKey('Registereduser',on_delete=models.CASCADE)
-    udhyog=models.CharField(max_length=12,unique=True)
-    pancard=models.CharField(max_length=10,unique=True)
-    adhaar=models.BigIntegerField(unique=True,default=0)
-    upi=models.CharField(max_length=45,unique=True)
-    ivrs=models.CharField(max_length=11,unique=True)
-    GST=models.CharField(max_length=15,unique=True,blank=True,null=True)
-    def __str__(self):
-        return self.udhyog
+    user_id=models.OneToOneField(User,on_delete=models.CASCADE)
+    phone_no=models.PositiveBigIntegerField(help_text="business registered contact",unique=True)
+    pan_no=models.CharField(max_length=10,unique=True)
+    udhyog_id=models.PositiveBigIntegerField()
+    aadhar_no=models.PositiveBigIntegerField()
+    ivrs_no=models.CharField(max_length=11,unique=True,help_text="property of business")
+    gst_no=models.CharField(max_length=15)
+    upi_id=models.CharField(max_length=45,unique=True)
+
+    def __int__(self):
+        return self.udhyog_id
+
+class PanITR(models.Model):
+    pan_no=models.ForeignKey(LoggedInUser,on_delete=models.CASCADE)
+    net_profit=models.IntegerField()
+    gross_profit=models.IntegerField()
+    loans=models.IntegerField()
+    assets=models.IntegerField()
+    bankcsv=models.CharField(max_length=250)
+
+class GovtDatabase(models.Model):
+    phone_no=models.PositiveBigIntegerField()
+    udhyog_id=models.PositiveBigIntegerField()
+    gst_no=models.CharField(max_length=15)
+    aadhar_no=models.PositiveBigIntegerField()
+
+class IvrsBill(models.Model):
+    ivrs_no=models.ForeignKey(LoggedInUser,on_delete=models.CASCADE)
+    billcsv=models.CharField(max_length=254)
