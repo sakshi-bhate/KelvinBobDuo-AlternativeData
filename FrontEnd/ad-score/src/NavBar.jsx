@@ -4,8 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-
-function NavBar(){
+import {Link} from 'react-router-dom'
+const NavBar=()=>{
     return(
         <Navbar className="navbar-dark" expand="lg">
           <Container>
@@ -16,7 +16,7 @@ function NavBar(){
                 <Nav.Link href="#home" style={{font:'Lato', fontSize:'20px', paddingRight: '50px', paddingTop:'15px'}}>Home</Nav.Link>
                 <Nav.Link href="#link" style={{font:'Lato', fontSize:'20px', paddingRight: '50px', paddingTop:'15px'}}>Blogs</Nav.Link>
                 <Nav.Link href="#link" style={{font:'Lato', fontSize:'20px', paddingRight: '50px', paddingTop:'15px'}}>Contact Us</Nav.Link>
-                <Button type="button" class="btn btn-outline-primary" style={{marginRight: '30px', marginTop:'15px', font:'Lato', fontSize:'20px',}}>Login</Button>
+                <Link to="/login"><Button type="button" class="btn btn-outline-primary" style={{marginRight: '30px', marginTop:'15px', font:'Lato', fontSize:'20px',}}>Login</Button></Link>
                 <Button type="button" class="btn btn-outline-primary" style={{marginRight: '30px', marginTop:'15px', font:'Lato', fontSize:'20px',}}>Sign Up</Button>
               </Nav>
             </Navbar.Collapse>
@@ -24,3 +24,4 @@ function NavBar(){
         </Navbar>
     );
 }
+export default NavBar

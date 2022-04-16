@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 ]
 
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
@@ -132,8 +133,10 @@ LOGIN_REDIRECT_URL='home'
 
 
 CORS_ORIGIN_ALLOW_ALL = True
-REST_FRAMEWORK={'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny',
-]}
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny',]
+
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

@@ -7,6 +7,11 @@ class LoggedInSerializer(serializers.ModelSerializer):
         model=LoggedInUser
         fields=('phone_no','pan_no','udhyog_id','aadhar_no','ivrs_no','gst_no','upi_id')
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=['id','username','password']
+
 # class LoggedInSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model=LoggedInUser

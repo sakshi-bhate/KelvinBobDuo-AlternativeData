@@ -1,17 +1,21 @@
 from django.shortcuts import render,redirect
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status,viewsets,permissions
 from django.contrib import messages
 from django.contrib.auth.models import User  
 from .forms import Reg_Form
-from .serializers import LoggedInSerializer
+from .serializers import LoggedInSerializer,UserSerializer
 from django.contrib.auth.decorators import login_required
-from .models import LoggedInUser
+from .models import LoggedInUser,PanITR,IvrsBill,Sentimental
 from rest_framework.views import APIView
-from .helpers import bank_data
+from .helpers import bank_statement,sentimental_analysis,bill_default,bank_score,senti_score,bill_score,sales_score,asset_score
 
 
+class UserViewSet(viewsets.ModelViewSet):
+
+    queryset=User.objects.all()
+    serializer_class=UserSerializer
 
 
 def home(request):
@@ -57,19 +61,47 @@ def fillDetails(request):
 
 
 
+
 @login_required
 def TrialView(request):
     target_user=request.user
     target_id=request.user.id
+    loggedinobj=LoggedInUser.objects.filter(user_id=target_id)[0]
+    # PanITR object created 
+    pan_obj=PanITR.objects.filter(pan_no=loggedinobj.pan_no)[0]
 
-    # loggedinobj=LoggedInUser.objects.filter(user_id=request.user.id)
-    # upi_object=UpiBank.objects.filter(upi_id=loggedinobj[0].upi_id)
-    target_data=bank_data("https://retoolapi.dev/Bpx9KZ/bnz100235a")
+    #IvrsBill object created
+    ivrs_obj=IvrsBill.objects.filter(ivrs_no=loggedinobj.ivrs_no)[0]
+
+    #sentimental object created
+    senti_obj=Sentimental.objects.filter(udhyog_id=loggedinobj.udhyog_id)[0]
+    
+    bank_defaults=bank_statement(pan_obj.bankcsv)
+    sentimental_defaults=sentimental_analysis(senti_obj.senticsv)
+    bill_defaults=bill_default(ivrs_obj.billcsv)
+    bank_scores=bank_score(bank_defaults)
+    bill_scores=bill_score(bill_defaults)
+    senti_scores=senti_score(sentimental_defaults)
+    sales_scores=sales_score(pan_obj)
+    debt_ratio=asset_score(pan_obj)
+
+
+    adscore=0.25*sales_scores+0.3*debt_ratio+0.3*bank_scores+0.1*bill_scores+0.05*senti_scores
+    adscore=adscore*20
+
 
     context={
         'target_user':target_user,
         'target_id':target_id,
         # 'some_data':upi_object[0].installment,
-        'target_data':target_data
+        'bank_defaults':bank_defaults,
+        'bank_scores':bank_scores,
+        'bill_defaults':bill_defaults,
+        'bill_scores':bill_scores,
+        'senti_scores':senti_scores,
+        'senti_defaults':sentimental_defaults,
+        "sales_score":sales_scores,
+        "debt_ratio":debt_ratio,
+        "total_score":adscore
     }
     return render(request,'users/trial.html',context)
