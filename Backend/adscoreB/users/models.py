@@ -1,10 +1,17 @@
 from django.db import models
 from phone_field import PhoneField
+from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
 
+
+
 # Create your models
+class CustomUser(AbstractUser):
+    def __str__(self):
+        return self.email
+
 class LoggedInUser(models.Model):
-    user_id=models.OneToOneField(User,on_delete=models.CASCADE)
+    user_id=models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     phone_no=models.PositiveBigIntegerField(help_text="business registered contact",unique=True)
     pan_no=models.CharField(max_length=10,unique=True)
     udhyog_id=models.PositiveBigIntegerField(unique=True)

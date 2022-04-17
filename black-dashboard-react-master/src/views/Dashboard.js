@@ -54,7 +54,7 @@ import {
   chartExample6,
 } from "variables/charts.js";
 
-const url="http://127.0.0.1:8000/api/trial"
+const url="http://127.0.0.1:8000/api/users/trial"
 function Dashboard(props) {
 
     const fetchdata = async ()=>{

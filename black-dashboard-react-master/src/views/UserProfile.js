@@ -19,6 +19,7 @@ import React,{useState} from "react";
 import * as  yup from 'yup';
 import axios from 'axios';
 import {Formik} from 'formik';
+import {Link} from 'react-router-dom'
 
 // reactstrap components
 import {
@@ -35,7 +36,7 @@ import {
   Col,
 } from "reactstrap";
 
-const BaseURL="http://127.0.0.1:8000/api/add/";
+const BaseURL="http://127.0.0.1:8000/api/users/add/";
 const re = /^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/gm;
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 const pan=/^([a-zA-Z]([a-zA-Z]([a-zA-Z]([a-zA-Z]([a-zA-Z]([0-9]([0-9]([0-9]([0-9]([a-zA-Z])?)?)?)?)?)?)?)?)?)?$/;
@@ -43,7 +44,7 @@ const ivrs=/^[N]{1}[0-9]{10}$/;
 const gst=/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 const upi=/^[\w.-]+@[\w.-]+$/;
 const NewValidationSchema=yup.object().shape({
-    website:yup.string().matches(re,'URL is not valid'),
+    // website:yup.string().matches(re,'URL is not valid'),
     phone_no: yup.string().required().label("phone_no").matches(phoneRegExp, 'Phone number is not valid'),
     pan_no: yup.string().required().label("pan_no").matches(pan, 'Pan number is not valid'),
     udhyog_id: yup.number().required().label("udhyog_id").typeError('Must be a number').min(12, 'Must be exactly 12 digits').max(12, 'Must be exactly 12 digits'),
@@ -51,25 +52,24 @@ const NewValidationSchema=yup.object().shape({
     ivrs_no:yup.string().required().label("ivrs_no").matches(ivrs, 'IVRS number is not valid'),
     gst_no:yup.string().required().label("gst_no").matches(gst, 'GST number is not valid'),
     upi_id:yup.string().required().label("upi_id").matches(upi, 'UPI Id is not valid'),
-    zip_code:yup.number().label("zip_code").min(6, 'Must be exactly 6 digits').max(6, 'Must be exactly 6 digits'),
+    // zip_code:yup.number().label("zip_code").min(6, 'Must be exactly 6 digits').max(6, 'Must be exactly 6 digits'),
 })
 
 
 const HandlePost=(values)=>{
-// axios.post(BaseURL,values).then(res=>{
-//     if(res.status===200){
-//         alert("added succesfully")
-//     }else{
-//         console.log("rejected")
-//         Promise.reject()
-//     }
-// }).catch((err)=>alert('something went wrong'))
+  axios.post(BaseURL,values).then(res=>{
+    if(res.status===200){
+      console.log("done")
+      window.location.replace('http://localhost:3000/admin/dashboard');
+    }else{
+      Promise.reject()
+    }
+  }).catch((err)=>alert("something went wrong"))
 }
-
 
 function UserProfile() {
   const[data,Setdata]=useState([])
-  return (<Formik validateOnChange isValidating initialValues={{company:"",owner:"",website:"",phone_no:"",udhyog_id:"",address:"", city:"",country:"",zip_code:"",pan_no:"",aadhar_no:"",gst_no:"",ivrs_no:"",upi_id:""}} validationSchema={NewValidationSchema} enableReinitialize onSubmit={HandlePost}>
+  return (<Formik validateOnChange isValidating initialValues={{phone_no:"",udhyog_id:"",pan_no:"",aadhar_no:"",gst_no:"",ivrs_no:"",upi_id:""}} validationSchema={NewValidationSchema} enableReinitialize onSubmit={HandlePost}>
         {({handleChange,handleSubmit,errors,touched,setFieldTouched})=>(
     <>
       <div className="content">
@@ -82,7 +82,7 @@ function UserProfile() {
               <CardBody>
                 <Form>
                   <Row>
-                    <Col className="pr-md-1" md="5">
+                    {/* <Col className="pr-md-1" md="5">
                       <FormGroup>
                         <label htmlFor='company' >Company*</label>
                         <Input
@@ -91,8 +91,8 @@ function UserProfile() {
                           onChange={handleChange("company")} onBlur={()=>setFieldTouched("company")}
                         />
                       </FormGroup>
-                    </Col>
-                    <Col className="px-md-1" md="3">
+                    </Col> */}
+                    {/* <Col className="px-md-1" md="3">
                       <FormGroup>
                         <label htmlFor='owner'>Owned By</label>
                         <Input
@@ -101,8 +101,8 @@ function UserProfile() {
                           onChange={handleChange("owner")} onBlur={()=>setFieldTouched("owner")}
                         />
                       </FormGroup>
-                    </Col>
-                    <Col className="pl-md-1" md="4">
+                    </Col> */}
+                    {/* <Col className="pl-md-1" md="4">
                       <FormGroup>
                         <label htmlFor="website">
                           Website
@@ -111,9 +111,9 @@ function UserProfile() {
                         onChange={handleChange("website")} onBlur={()=>setFieldTouched("website")}
                         />
                       </FormGroup>
-                    </Col>
+                    </Col> */}
                   </Row>
-                   <Row>
+                  <Row>
                     <Col className="pr-md-1" md="6">
                       <FormGroup>
                         <label htmlFor="phone_no">Phone Number*</label>
@@ -136,7 +136,7 @@ function UserProfile() {
                     </Col>
                   </Row>
                    <Row>
-                    <Col md="12">
+                    {/* <Col md="12">
                       <FormGroup>
                         <label htmlFor='address'>Address</label>
                         <Input
@@ -145,10 +145,10 @@ function UserProfile() {
                           onChange={handleChange("address")} onBlur={()=>setFieldTouched("address")}
                         />
                       </FormGroup>
-                    </Col>
+                    </Col> */}
                   </Row>
                   <Row>
-                    <Col className="pr-md-1" md="4">
+                    {/* <Col className="pr-md-1" md="4">
                       <FormGroup>
                         <label htmlFor='city'>City</label>
                         <Input
@@ -157,8 +157,8 @@ function UserProfile() {
                           onChange={handleChange("city")} onBlur={()=>setFieldTouched("city")}
                         />
                       </FormGroup>
-                    </Col>
-                    <Col className="px-md-1" md="4">
+                    </Col> */}
+                    {/* <Col className="px-md-1" md="4">
                       <FormGroup>
                         <label htmlFor='country'>Country</label>
                         <Input
@@ -167,8 +167,8 @@ function UserProfile() {
                           onChange={handleChange("country")} onBlur={()=>setFieldTouched("country")}
                         />
                       </FormGroup>
-                    </Col>
-                    <Col className="pl-md-1" md="4">
+                    </Col> */}
+                    {/* <Col className="pl-md-1" md="4">
                       <FormGroup>
                         <label htmlFor='zip_code'>Postal Code</label>
                         <Input placeholder="ZIP Code"  
@@ -176,7 +176,7 @@ function UserProfile() {
                         onChange={handleChange("zip_code")} onBlur={()=>setFieldTouched("zip_code")}
                         />
                       </FormGroup>
-                    </Col>
+                    </Col> */}
                   </Row>
                   <Row>
                     <Col className="pr-md-1" md="4">
@@ -199,7 +199,7 @@ function UserProfile() {
                         />
                       </FormGroup>
                     </Col>
-                     <Col className="pl-md-1" md="4">
+                  <Col className="pl-md-1" md="4">
                       <FormGroup>
                         <label htmlFor='gst_no'>GST Number*</label>
                         <Input placeholder="GST Number" type="text" 
@@ -234,10 +234,10 @@ function UserProfile() {
                 </Form>
               </CardBody>
               <CardFooter>
-                <Button className="btn-fill" color="primary" type="submit">
+                {/* <Button className="btn-fill" color="primary" type="submit">
                   Save
-                </Button>
-                <Button className="btn-fill" color="primary" type="submit">
+                </Button> */}
+              <Button className="btn-fill" color="primary" type="submit" onClick={handleSubmit}>
                   Calculate Score
                 </Button>
               </CardFooter>

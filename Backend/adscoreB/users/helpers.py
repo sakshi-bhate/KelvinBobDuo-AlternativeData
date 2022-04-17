@@ -47,11 +47,11 @@ def senti_score(senti_defaults):
     final_score=(per_target/100)*5
     return final_score
 
-global sum1, sum2
 def bank_score(bank_defaults):
     installment=(0.66*bank_defaults)
     bounce=(0.33*bank_defaults)
-    
+    sum2=0
+    sum1=0
     if bounce==0:
         sum1=2.5
     elif bounce==1:

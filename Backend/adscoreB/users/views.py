@@ -11,6 +11,12 @@ from .models import LoggedInUser,PanITR,IvrsBill,Sentimental
 from rest_framework.views import APIView
 from .helpers import bank_statement,sentimental_analysis,bill_default,bank_score,senti_score,bill_score,sales_score,asset_score
 from django.http import JsonResponse
+from django.contrib.auth.middleware import get_user
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
+
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -46,10 +52,10 @@ def register(request):
 @login_required()
 @api_view(['POST'])
 def fillDetails(request):
+
     serializer=LoggedInSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(user_id=request.user)
-        print("hello")
+        serializer.save(user_id=get_user(request))
         return Response(serializer.data)
     return Response(serializer.errors,st,status=status.HTTP_400_BAD_REQUEST)
 # class LoggedinApiView(APIView):
@@ -59,24 +65,16 @@ def fillDetails(request):
 #         serializer.save(user_id=request.user)
 #         return Response(status=status.HTTP_201_CREATED)
 
-
-
-
-
-
 @api_view(["GET"])
 def TrialView(request):
-    target_id=request.user.id
-
-    loggedinobj=LoggedInUser.objects.filter(user_id=target_id)[0]
+    target_id=get_user(request)
+    loggedinobj=LoggedInUser.objects.filter(user_id=target_id).first()
     # PanITR object created 
-    pan_obj=PanITR.objects.filter(pan_no=loggedinobj.pan_no)[0]
-
+    pan_obj=PanITR.objects.filter(pan_no=loggedinobj.pan_no).first()
     #IvrsBill object created
-    ivrs_obj=IvrsBill.objects.filter(ivrs_no=loggedinobj.ivrs_no)[0]
-
+    ivrs_obj=IvrsBill.objects.filter(ivrs_no=loggedinobj.ivrs_no).first()
     #sentimental object created
-    senti_obj=Sentimental.objects.filter(udhyog_id=loggedinobj.udhyog_id)[0]
+    senti_obj=Sentimental.objects.filter(udhyog_id=loggedinobj.udhyog_id).first()
 
     bank_defaults=bank_statement(pan_obj.bankcsv)
     sentimental_defaults=sentimental_analysis(senti_obj.senticsv)
@@ -89,6 +87,7 @@ def TrialView(request):
     adscore=0.25*sales_scores+0.3*debt_ratio+0.3*bank_scores+0.1*bill_scores+0.05*senti_scores
     adscore=adscore*20
     context={
+        'username':request.user.username,
         'bank_defaults':bank_defaults,
         'bank_scores':bank_scores,
         'bill_defaults':bill_defaults,
@@ -97,7 +96,8 @@ def TrialView(request):
         'senti_defaults':sentimental_defaults,
         "sales_score":sales_scores,
         "debt_ratio":debt_ratio,
-        "total_score":adscore
+        "total_score":adscore,
     }
-
     return JsonResponse(context)
+    # return Response(json.dumps(context))
+    # return render(request,"users/trial.html",context)
