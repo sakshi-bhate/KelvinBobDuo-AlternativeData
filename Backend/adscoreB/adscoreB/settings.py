@@ -37,13 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
     'users',
     'rest_framework',
     'crispy_forms',
     'corsheaders',
-
     
-
 ]
 
 
@@ -132,10 +131,13 @@ LOGIN_URL='login'
 LOGIN_REDIRECT_URL='home'
 
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST=[
+    "http://localhost:3000"
+]
+
 REST_FRAMEWORK={
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny',]
-
 }
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

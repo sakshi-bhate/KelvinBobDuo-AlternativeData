@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Features from './Features';
-import FooterPage from './Footer';
+
 import NavBar from './NavBar'
 
 const Hero=()=>{
@@ -48,7 +48,6 @@ const Hero=()=>{
     width: '99vw',
     height: '100vh',}}>
     </div>
-    <FooterPage/>
     </div>
     )
 

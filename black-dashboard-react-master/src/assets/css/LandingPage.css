@@ -1,0 +1,64 @@
+body{
+  background-color:'#000C22';
+  width:'100vw';
+}
+.Bg1{
+  position:absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+}
+.Navigationn-bar{
+  position:absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -2;
+}
+.head-text {
+   position: relative;
+}
+.text-on-image {
+  position: absolute;
+  top: 150%;
+  left:3%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+.Heading{
+  font-size:4rem;
+  font-family: 'Open Sans', sans-serif;
+  color:'#fff';
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-content:flex-end;
+  margin-left:50px;
+  width:70vw;
+  height:70vh;
+  text-align:left;
+}
+
+h1{
+  font-size:20px;
+  font:'Lato';
+  font-weight:bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.about p{
+  font-size:15px;
+  font:'Lato';
+  color: #D3D3D3;
+  align-self:center;
+  margin-top:2rem;
+  margin-bottom:4rem;
+  width: 100vw;
+}
+
+.about{
+  align-self:center;
+  justify-content:'center';
+  width: 70vw;
+}
+
