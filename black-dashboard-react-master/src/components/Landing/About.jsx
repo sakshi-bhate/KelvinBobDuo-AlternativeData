@@ -11,15 +11,15 @@ function About(){
               <div className="col-xs-12 col-md-6">
                 <div className="about-text">
                   <h2>About Us</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Our agenda is to build an alternative-data-credit scoring system that would make it possible for MSMEs with low credit score to avail loan opportunities which will contribute in improving their credit profile and business growth.</p>
                   <h3>Why Choose Us?</h3>
                   <div className="list-style">
-                    <div className="col-lg-6 col-sm-6 col-xs-12">
+                    <div className="col-lg-8 col-sm-6 col-xs-12">
                       <ul>
-                        <li>Lorem ipsum dolor</li>
-                        <li>Tempor incididunt</li>
-                        <li>Lorem ipsum dolor</li>
-                        <li>Incididunt ut labore</li>
+                        <li>No Documents Required</li>
+                        <li>Quick and seamless application process</li>
+                        <li>Get Personalized loan recommendation</li>
+                        <li>Become eligible for AmEx credit card</li>
                       </ul>
                     </div>
                   </div>

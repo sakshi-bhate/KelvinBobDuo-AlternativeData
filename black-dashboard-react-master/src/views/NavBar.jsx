@@ -36,7 +36,7 @@ function NavBar(){
     return(
         <Navbar id="navbar" className="navbar-dark" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Brand href="#home">Kelvin Bob</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">

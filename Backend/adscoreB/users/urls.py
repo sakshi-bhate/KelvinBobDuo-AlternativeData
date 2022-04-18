@@ -8,8 +8,8 @@ from .views import UserViewSet
 urlpatterns=[
     path('home/',views.home,name="home"),
     path('signup/',views.register,name="signup"),
+    path('add/',views.fillDetails,name="fillDetails"),
     path('login/',auth_views.LoginView.as_view(template_name='users/login.html'),name='login'),
-    path('add/',views.fillDetails,name="fillDetail"),
     path('trial/',views.TrialView, name='trial'),
     path('auth/',include('rest_auth.urls')),
     path('auth/register/',include('rest_auth.registration.urls'))

@@ -1,3 +1,4 @@
+@include url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
 :root {
 	--blue: #007bff;
 	--indigo: #6610f2;
@@ -80,7 +81,7 @@ hr {
 
 h1,
 h2,
-h3,
+.mytext h3,
 h4,
 h5,
 h6 {
@@ -372,7 +373,7 @@ template {
 
 h1,
 h2,
-h3,
+.mytext h3,
 h4,
 h5,
 h6,
@@ -397,7 +398,7 @@ h2,
 	font-size: 2rem
 }
 
-h3,
+.mytext h3,
 .h3 {
 	font-size: 1.75rem
 }
@@ -2091,7 +2092,7 @@ pre code {
 	border: 0
 }
 
-.form-control {
+.myform-control {
 	display: block;
 	width: 100%;
 	height: calc(1.5em + 0.75rem + 2px);
@@ -2112,19 +2113,19 @@ pre code {
 }
 
 @media (prefers-reduced-motion:reduce) {
-	.form-control {
+	.myform-control {
 		-webkit-transition: none;
 		-o-transition: none;
 		transition: none
 	}
 }
 
-.form-control::-ms-expand {
+.myform-control::-ms-expand {
 	background-color: transparent;
 	border: 0
 }
 
-.form-control:focus {
+.myform-control:focus {
 	color: #495057;
 	background-color: #fff;
 	border-color: #80bdff;
@@ -2133,39 +2134,39 @@ pre code {
 	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
 }
 
-.form-control::-webkit-input-placeholder {
+.myform-control::-webkit-input-placeholder {
 	color: #6c757d;
 	opacity: 1
 }
 
-.form-control:-ms-input-placeholder {
+.myform-control:-ms-input-placeholder {
 	color: #6c757d;
 	opacity: 1
 }
 
-.form-control::-ms-input-placeholder {
+.myform-control::-ms-input-placeholder {
 	color: #6c757d;
 	opacity: 1
 }
 
-.form-control::placeholder {
+.myform-control::placeholder {
 	color: #6c757d;
 	opacity: 1
 }
 
-.form-control:disabled,
-.form-control[readonly] {
+.myform-control:disabled,
+.myform-control[readonly] {
 	background-color: #e9ecef;
 	opacity: 1
 }
 
-select.form-control:focus::-ms-value {
+select.myform-control:focus::-ms-value {
 	color: #495057;
 	background-color: #fff
 }
 
-.form-control-file,
-.form-control-range {
+.myform-control-file,
+.myform-control-range {
 	display: block;
 	width: 100%
 }
@@ -2192,7 +2193,7 @@ select.form-control:focus::-ms-value {
 	line-height: 1.5
 }
 
-.form-control-plaintext {
+.myform-control-plaintext {
 	display: block;
 	width: 100%;
 	padding-top: .375rem;
@@ -2205,13 +2206,13 @@ select.form-control:focus::-ms-value {
 	border-width: 1px 0
 }
 
-.form-control-plaintext.form-control-sm,
-.form-control-plaintext.form-control-lg {
+.myform-control-plaintext.myform-control-sm,
+.myform-control-plaintext.myform-control-lg {
 	padding-right: 0;
 	padding-left: 0
 }
 
-.form-control-sm {
+.myform-control-sm {
 	height: calc(1.5em + 0.5rem + 2px);
 	padding: .25rem .5rem;
 	font-size: .875rem;
@@ -2219,7 +2220,7 @@ select.form-control:focus::-ms-value {
 	border-radius: .2rem
 }
 
-.form-control-lg {
+.myform-control-lg {
 	height: calc(1.5em + 1rem + 2px);
 	padding: .5rem 1rem;
 	font-size: 1.25rem;
@@ -2227,12 +2228,12 @@ select.form-control:focus::-ms-value {
 	border-radius: .3rem
 }
 
-select.form-control[size],
-select.form-control[multiple] {
+select.myform-control[size],
+select.myform-control[multiple] {
 	height: auto
 }
 
-textarea.form-control {
+textarea.myform-control {
 	height: auto
 }
 
@@ -2322,8 +2323,8 @@ textarea.form-control {
 	border-radius: .25rem
 }
 
-.was-validated .form-control:valid,
-.form-control.is-valid {
+.was-validated .myform-control:valid,
+.myform-control.is-valid {
 	border-color: #28a745;
 	padding-right: calc(1.5em + 0.75rem);
 	background-image: url(data:image/svg+xml,%3csvg\ xmlns=\'http://www.w3.org/2000/svg\'\ viewBox=\'0\ 0\ 8\ 8\'%3e%3cpath\ fill=\'%2328a745\'\ d=\'M2.3\ 6.73L.6\ 4.53c-.4-1.04.46-1.4\ 1.1-.8l1.1\ 1.4\ 3.4-3.8c.6-.63\ 1.6-.27\ 1.2.7l-4\ 4.6c-.43.5-.8.4-1.1.1z\'/%3e%3c/svg%3e);
@@ -2332,22 +2333,22 @@ textarea.form-control {
 	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem)
 }
 
-.was-validated .form-control:valid:focus,
-.form-control.is-valid:focus {
+.was-validated .myform-control:valid:focus,
+.myform-control.is-valid:focus {
 	border-color: #28a745;
 	-webkit-box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
 }
 
-.was-validated .form-control:valid~.valid-feedback,
-.was-validated .form-control:valid~.valid-tooltip,
-.form-control.is-valid~.valid-feedback,
-.form-control.is-valid~.valid-tooltip {
+.was-validated .myform-control:valid~.valid-feedback,
+.was-validated .myform-control:valid~.valid-tooltip,
+.myform-control.is-valid~.valid-feedback,
+.myform-control.is-valid~.valid-tooltip {
 	display: block
 }
 
-.was-validated textarea.form-control:valid,
-textarea.form-control.is-valid {
+.was-validated textarea.myform-control:valid,
+textarea.myform-control.is-valid {
 	padding-right: calc(1.5em + 0.75rem);
 	background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem)
 }
@@ -2373,10 +2374,10 @@ textarea.form-control.is-valid {
 	display: block
 }
 
-.was-validated .form-control-file:valid~.valid-feedback,
-.was-validated .form-control-file:valid~.valid-tooltip,
-.form-control-file.is-valid~.valid-feedback,
-.form-control-file.is-valid~.valid-tooltip {
+.was-validated .myform-control-file:valid~.valid-feedback,
+.was-validated .myform-control-file:valid~.valid-tooltip,
+.myform-control-file.is-valid~.valid-feedback,
+.myform-control-file.is-valid~.valid-tooltip {
 	display: block
 }
 
@@ -2468,8 +2469,8 @@ textarea.form-control.is-valid {
 	border-radius: .25rem
 }
 
-.was-validated .form-control:invalid,
-.form-control.is-invalid {
+.was-validated .myform-control:invalid,
+.myform-control.is-invalid {
 	border-color: #dc3545;
 	padding-right: calc(1.5em + 0.75rem);
 	background-image: url(data:image/svg+xml,%3csvg\ xmlns=\'http://www.w3.org/2000/svg\'\ fill=\'%23dc3545\'\ viewBox=\'-2\ -2\ 7\ 7\'%3e%3cpath\ stroke=\'%23dc3545\'\ d=\'M0\ 0l3\ 3m0-3L0\ 3\'/%3e%3ccircle\ r=\'.5\'/%3e%3ccircle\ cx=\'3\'\ r=\'.5\'/%3e%3ccircle\ cy=\'3\'\ r=\'.5\'/%3e%3ccircle\ cx=\'3\'\ cy=\'3\'\ r=\'.5\'/%3e%3c/svg%3E);
@@ -2478,22 +2479,22 @@ textarea.form-control.is-valid {
 	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem)
 }
 
-.was-validated .form-control:invalid:focus,
-.form-control.is-invalid:focus {
+.was-validated .myform-control:invalid:focus,
+.myform-control.is-invalid:focus {
 	border-color: #dc3545;
 	-webkit-box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
 }
 
-.was-validated .form-control:invalid~.invalid-feedback,
-.was-validated .form-control:invalid~.invalid-tooltip,
-.form-control.is-invalid~.invalid-feedback,
-.form-control.is-invalid~.invalid-tooltip {
+.was-validated .myform-control:invalid~.invalid-feedback,
+.was-validated .myform-control:invalid~.invalid-tooltip,
+.myform-control.is-invalid~.invalid-feedback,
+.myform-control.is-invalid~.invalid-tooltip {
 	display: block
 }
 
-.was-validated textarea.form-control:invalid,
-textarea.form-control.is-invalid {
+.was-validated textarea.myform-control:invalid,
+textarea.myform-control.is-invalid {
 	padding-right: calc(1.5em + 0.75rem);
 	background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem)
 }
@@ -2519,10 +2520,10 @@ textarea.form-control.is-invalid {
 	display: block
 }
 
-.was-validated .form-control-file:invalid~.invalid-feedback,
-.was-validated .form-control-file:invalid~.invalid-tooltip,
-.form-control-file.is-invalid~.invalid-feedback,
-.form-control-file.is-invalid~.invalid-tooltip {
+.was-validated .myform-control-file:invalid~.invalid-feedback,
+.was-validated .myform-control-file:invalid~.invalid-tooltip,
+.myform-control-file.is-invalid~.invalid-feedback,
+.myform-control-file.is-invalid~.invalid-tooltip {
 	display: block
 }
 
@@ -2637,12 +2638,12 @@ textarea.form-control.is-invalid {
 		align-items: center;
 		margin-bottom: 0
 	}
-	.form-inline .form-control {
+	.form-inline .myform-control {
 		display: inline-block;
 		width: auto;
 		vertical-align: middle
 	}
-	.form-inline .form-control-plaintext {
+	.form-inline .myform-control-plaintext {
 		display: inline-block
 	}
 	.form-inline .input-group,
@@ -2696,6 +2697,8 @@ textarea.form-control.is-invalid {
 	background-color: transparent;
 	border: 1px solid transparent;
 	padding: .375rem .75rem;
+	margin-left:.5rem;
+	margin-right:.5rem;
 	font-size: 1rem;
 	line-height: 1.5;
 	border-radius: .25rem;
@@ -3860,8 +3863,8 @@ input[type="button"].btn-block {
 	width: 100%
 }
 
-.input-group>.form-control,
-.input-group>.form-control-plaintext,
+.input-group>.myform-control,
+.input-group>.myform-control-plaintext,
 .input-group>.custom-select,
 .input-group>.custom-file {
 	position: relative;
@@ -3872,22 +3875,22 @@ input[type="button"].btn-block {
 	margin-bottom: 0
 }
 
-.input-group>.form-control+.form-control,
-.input-group>.form-control+.custom-select,
-.input-group>.form-control+.custom-file,
-.input-group>.form-control-plaintext+.form-control,
-.input-group>.form-control-plaintext+.custom-select,
-.input-group>.form-control-plaintext+.custom-file,
-.input-group>.custom-select+.form-control,
+.input-group>.myform-control+.myform-control,
+.input-group>.myform-control+.custom-select,
+.input-group>.myform-control+.custom-file,
+.input-group>.myform-control-plaintext+.myform-control,
+.input-group>.myform-control-plaintext+.custom-select,
+.input-group>.myform-control-plaintext+.custom-file,
+.input-group>.custom-select+.myform-control,
 .input-group>.custom-select+.custom-select,
 .input-group>.custom-select+.custom-file,
-.input-group>.custom-file+.form-control,
+.input-group>.custom-file+.myform-control,
 .input-group>.custom-file+.custom-select,
 .input-group>.custom-file+.custom-file {
 	margin-left: -1px
 }
 
-.input-group>.form-control:focus,
+.input-group>.myform-control:focus,
 .input-group>.custom-select:focus,
 .input-group>.custom-file .custom-file-input:focus~.custom-file-label {
 	z-index: 3
@@ -3897,13 +3900,13 @@ input[type="button"].btn-block {
 	z-index: 4
 }
 
-.input-group>.form-control:not(:last-child),
+.input-group>.myform-control:not(:last-child),
 .input-group>.custom-select:not(:last-child) {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0
 }
 
-.input-group>.form-control:not(:first-child),
+.input-group>.myform-control:not(:first-child),
 .input-group>.custom-select:not(:first-child) {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0
@@ -3991,12 +3994,12 @@ input[type="button"].btn-block {
 	margin-top: 0
 }
 
-.input-group-lg>.form-control:not(textarea),
+.input-group-lg>.myform-control:not(textarea),
 .input-group-lg>.custom-select {
 	height: calc(1.5em + 1rem + 2px)
 }
 
-.input-group-lg>.form-control,
+.input-group-lg>.myform-control,
 .input-group-lg>.custom-select,
 .input-group-lg>.input-group-prepend>.input-group-text,
 .input-group-lg>.input-group-append>.input-group-text,
@@ -4008,12 +4011,12 @@ input[type="button"].btn-block {
 	border-radius: .3rem
 }
 
-.input-group-sm>.form-control:not(textarea),
+.input-group-sm>.myform-control:not(textarea),
 .input-group-sm>.custom-select {
 	height: calc(1.5em + 0.5rem + 2px)
 }
 
-.input-group-sm>.form-control,
+.input-group-sm>.myform-control,
 .input-group-sm>.custom-select,
 .input-group-sm>.input-group-prepend>.input-group-text,
 .input-group-sm>.input-group-append>.input-group-text,
@@ -8773,7 +8776,7 @@ button.bg-dark:focus {
 }
 
 .mt-0,
-.my-0 {
+.-0 {
 	margin-top: 0!important
 }
 
@@ -8783,7 +8786,7 @@ button.bg-dark:focus {
 }
 
 .mb-0,
-.my-0 {
+.-0 {
 	margin-bottom: 0!important
 }
 
@@ -8797,7 +8800,7 @@ button.bg-dark:focus {
 }
 
 .mt-1,
-.my-1 {
+.-1 {
 	margin-top: .25rem!important
 }
 
@@ -8807,7 +8810,7 @@ button.bg-dark:focus {
 }
 
 .mb-1,
-.my-1 {
+.-1 {
 	margin-bottom: .25rem!important
 }
 
@@ -8821,7 +8824,7 @@ button.bg-dark:focus {
 }
 
 .mt-2,
-.my-2 {
+.-2 {
 	margin-top: .5rem!important
 }
 
@@ -8831,7 +8834,7 @@ button.bg-dark:focus {
 }
 
 .mb-2,
-.my-2 {
+.-2 {
 	margin-bottom: .5rem!important
 }
 
@@ -8845,7 +8848,7 @@ button.bg-dark:focus {
 }
 
 .mt-3,
-.my-3 {
+.-3 {
 	margin-top: 1rem!important
 }
 
@@ -8855,7 +8858,7 @@ button.bg-dark:focus {
 }
 
 .mb-3,
-.my-3 {
+.-3 {
 	margin-bottom: 1rem!important
 }
 
@@ -8869,7 +8872,7 @@ button.bg-dark:focus {
 }
 
 .mt-4,
-.my-4 {
+.-4 {
 	margin-top: 1.5rem!important
 }
 
@@ -8879,7 +8882,7 @@ button.bg-dark:focus {
 }
 
 .mb-4,
-.my-4 {
+.-4 {
 	margin-bottom: 1.5rem!important
 }
 
@@ -8893,7 +8896,7 @@ button.bg-dark:focus {
 }
 
 .mt-5,
-.my-5 {
+.-5 {
 	margin-top: 3rem!important
 }
 
@@ -8903,7 +8906,7 @@ button.bg-dark:focus {
 }
 
 .mb-5,
-.my-5 {
+.-5 {
 	margin-bottom: 3rem!important
 }
 
@@ -9061,7 +9064,7 @@ button.bg-dark:focus {
 }
 
 .mt-n1,
-.my-n1 {
+.-n1 {
 	margin-top: -.25rem!important
 }
 
@@ -9071,7 +9074,7 @@ button.bg-dark:focus {
 }
 
 .mb-n1,
-.my-n1 {
+.-n1 {
 	margin-bottom: -.25rem!important
 }
 
@@ -9085,7 +9088,7 @@ button.bg-dark:focus {
 }
 
 .mt-n2,
-.my-n2 {
+.-n2 {
 	margin-top: -.5rem!important
 }
 
@@ -9095,7 +9098,7 @@ button.bg-dark:focus {
 }
 
 .mb-n2,
-.my-n2 {
+.-n2 {
 	margin-bottom: -.5rem!important
 }
 
@@ -9109,7 +9112,7 @@ button.bg-dark:focus {
 }
 
 .mt-n3,
-.my-n3 {
+.-n3 {
 	margin-top: -1rem!important
 }
 
@@ -9119,7 +9122,7 @@ button.bg-dark:focus {
 }
 
 .mb-n3,
-.my-n3 {
+.-n3 {
 	margin-bottom: -1rem!important
 }
 
@@ -9133,7 +9136,7 @@ button.bg-dark:focus {
 }
 
 .mt-n4,
-.my-n4 {
+.-n4 {
 	margin-top: -1.5rem!important
 }
 
@@ -9143,7 +9146,7 @@ button.bg-dark:focus {
 }
 
 .mb-n4,
-.my-n4 {
+.-n4 {
 	margin-bottom: -1.5rem!important
 }
 
@@ -9157,7 +9160,7 @@ button.bg-dark:focus {
 }
 
 .mt-n5,
-.my-n5 {
+.-n5 {
 	margin-top: -3rem!important
 }
 
@@ -9167,7 +9170,7 @@ button.bg-dark:focus {
 }
 
 .mb-n5,
-.my-n5 {
+.-n5 {
 	margin-bottom: -3rem!important
 }
 
@@ -9181,7 +9184,7 @@ button.bg-dark:focus {
 }
 
 .mt-auto,
-.my-auto {
+.-auto {
 	margin-top: auto!important
 }
 
@@ -9191,7 +9194,7 @@ button.bg-dark:focus {
 }
 
 .mb-auto,
-.my-auto {
+.-auto {
 	margin-bottom: auto!important
 }
 
@@ -9205,7 +9208,7 @@ button.bg-dark:focus {
 		margin: 0!important
 	}
 	.mt-sm-0,
-	.my-sm-0 {
+	.-sm-0 {
 		margin-top: 0!important
 	}
 	.mr-sm-0,
@@ -9213,7 +9216,7 @@ button.bg-dark:focus {
 		margin-right: 0!important
 	}
 	.mb-sm-0,
-	.my-sm-0 {
+	.-sm-0 {
 		margin-bottom: 0!important
 	}
 	.ml-sm-0,
@@ -9224,7 +9227,7 @@ button.bg-dark:focus {
 		margin: .25rem!important
 	}
 	.mt-sm-1,
-	.my-sm-1 {
+	.-sm-1 {
 		margin-top: .25rem!important
 	}
 	.mr-sm-1,
@@ -9232,7 +9235,7 @@ button.bg-dark:focus {
 		margin-right: .25rem!important
 	}
 	.mb-sm-1,
-	.my-sm-1 {
+	.-sm-1 {
 		margin-bottom: .25rem!important
 	}
 	.ml-sm-1,
@@ -9243,7 +9246,7 @@ button.bg-dark:focus {
 		margin: .5rem!important
 	}
 	.mt-sm-2,
-	.my-sm-2 {
+	.-sm-2 {
 		margin-top: .5rem!important
 	}
 	.mr-sm-2,
@@ -9251,7 +9254,7 @@ button.bg-dark:focus {
 		margin-right: .5rem!important
 	}
 	.mb-sm-2,
-	.my-sm-2 {
+	.-sm-2 {
 		margin-bottom: .5rem!important
 	}
 	.ml-sm-2,
@@ -9262,7 +9265,7 @@ button.bg-dark:focus {
 		margin: 1rem!important
 	}
 	.mt-sm-3,
-	.my-sm-3 {
+	.-sm-3 {
 		margin-top: 1rem!important
 	}
 	.mr-sm-3,
@@ -9270,7 +9273,7 @@ button.bg-dark:focus {
 		margin-right: 1rem!important
 	}
 	.mb-sm-3,
-	.my-sm-3 {
+	.-sm-3 {
 		margin-bottom: 1rem!important
 	}
 	.ml-sm-3,
@@ -9281,7 +9284,7 @@ button.bg-dark:focus {
 		margin: 1.5rem!important
 	}
 	.mt-sm-4,
-	.my-sm-4 {
+	.-sm-4 {
 		margin-top: 1.5rem!important
 	}
 	.mr-sm-4,
@@ -9289,7 +9292,7 @@ button.bg-dark:focus {
 		margin-right: 1.5rem!important
 	}
 	.mb-sm-4,
-	.my-sm-4 {
+	.-sm-4 {
 		margin-bottom: 1.5rem!important
 	}
 	.ml-sm-4,
@@ -9300,7 +9303,7 @@ button.bg-dark:focus {
 		margin: 3rem!important
 	}
 	.mt-sm-5,
-	.my-sm-5 {
+	.-sm-5 {
 		margin-top: 3rem!important
 	}
 	.mr-sm-5,
@@ -9308,7 +9311,7 @@ button.bg-dark:focus {
 		margin-right: 3rem!important
 	}
 	.mb-sm-5,
-	.my-sm-5 {
+	.-sm-5 {
 		margin-bottom: 3rem!important
 	}
 	.ml-sm-5,
@@ -9433,7 +9436,7 @@ button.bg-dark:focus {
 		margin: -.25rem!important
 	}
 	.mt-sm-n1,
-	.my-sm-n1 {
+	.-sm-n1 {
 		margin-top: -.25rem!important
 	}
 	.mr-sm-n1,
@@ -9441,7 +9444,7 @@ button.bg-dark:focus {
 		margin-right: -.25rem!important
 	}
 	.mb-sm-n1,
-	.my-sm-n1 {
+	.-sm-n1 {
 		margin-bottom: -.25rem!important
 	}
 	.ml-sm-n1,
@@ -9452,7 +9455,7 @@ button.bg-dark:focus {
 		margin: -.5rem!important
 	}
 	.mt-sm-n2,
-	.my-sm-n2 {
+	.-sm-n2 {
 		margin-top: -.5rem!important
 	}
 	.mr-sm-n2,
@@ -9460,7 +9463,7 @@ button.bg-dark:focus {
 		margin-right: -.5rem!important
 	}
 	.mb-sm-n2,
-	.my-sm-n2 {
+	.-sm-n2 {
 		margin-bottom: -.5rem!important
 	}
 	.ml-sm-n2,
@@ -9471,7 +9474,7 @@ button.bg-dark:focus {
 		margin: -1rem!important
 	}
 	.mt-sm-n3,
-	.my-sm-n3 {
+	.-sm-n3 {
 		margin-top: -1rem!important
 	}
 	.mr-sm-n3,
@@ -9479,7 +9482,7 @@ button.bg-dark:focus {
 		margin-right: -1rem!important
 	}
 	.mb-sm-n3,
-	.my-sm-n3 {
+	.-sm-n3 {
 		margin-bottom: -1rem!important
 	}
 	.ml-sm-n3,
@@ -9490,7 +9493,7 @@ button.bg-dark:focus {
 		margin: -1.5rem!important
 	}
 	.mt-sm-n4,
-	.my-sm-n4 {
+	.-sm-n4 {
 		margin-top: -1.5rem!important
 	}
 	.mr-sm-n4,
@@ -9498,7 +9501,7 @@ button.bg-dark:focus {
 		margin-right: -1.5rem!important
 	}
 	.mb-sm-n4,
-	.my-sm-n4 {
+	.-sm-n4 {
 		margin-bottom: -1.5rem!important
 	}
 	.ml-sm-n4,
@@ -9509,7 +9512,7 @@ button.bg-dark:focus {
 		margin: -3rem!important
 	}
 	.mt-sm-n5,
-	.my-sm-n5 {
+	.-sm-n5 {
 		margin-top: -3rem!important
 	}
 	.mr-sm-n5,
@@ -9517,7 +9520,7 @@ button.bg-dark:focus {
 		margin-right: -3rem!important
 	}
 	.mb-sm-n5,
-	.my-sm-n5 {
+	.-sm-n5 {
 		margin-bottom: -3rem!important
 	}
 	.ml-sm-n5,
@@ -9528,7 +9531,7 @@ button.bg-dark:focus {
 		margin: auto!important
 	}
 	.mt-sm-auto,
-	.my-sm-auto {
+	.-sm-auto {
 		margin-top: auto!important
 	}
 	.mr-sm-auto,
@@ -9536,7 +9539,7 @@ button.bg-dark:focus {
 		margin-right: auto!important
 	}
 	.mb-sm-auto,
-	.my-sm-auto {
+	.-sm-auto {
 		margin-bottom: auto!important
 	}
 	.ml-sm-auto,
@@ -9550,7 +9553,7 @@ button.bg-dark:focus {
 		margin: 0!important
 	}
 	.mt-md-0,
-	.my-md-0 {
+	.-md-0 {
 		margin-top: 0!important
 	}
 	.mr-md-0,
@@ -9558,7 +9561,7 @@ button.bg-dark:focus {
 		margin-right: 0!important
 	}
 	.mb-md-0,
-	.my-md-0 {
+	.-md-0 {
 		margin-bottom: 0!important
 	}
 	.ml-md-0,
@@ -9569,7 +9572,7 @@ button.bg-dark:focus {
 		margin: .25rem!important
 	}
 	.mt-md-1,
-	.my-md-1 {
+	.-md-1 {
 		margin-top: .25rem!important
 	}
 	.mr-md-1,
@@ -9577,7 +9580,7 @@ button.bg-dark:focus {
 		margin-right: .25rem!important
 	}
 	.mb-md-1,
-	.my-md-1 {
+	.-md-1 {
 		margin-bottom: .25rem!important
 	}
 	.ml-md-1,
@@ -9588,7 +9591,7 @@ button.bg-dark:focus {
 		margin: .5rem!important
 	}
 	.mt-md-2,
-	.my-md-2 {
+	.-md-2 {
 		margin-top: .5rem!important
 	}
 	.mr-md-2,
@@ -9596,7 +9599,7 @@ button.bg-dark:focus {
 		margin-right: .5rem!important
 	}
 	.mb-md-2,
-	.my-md-2 {
+	.-md-2 {
 		margin-bottom: .5rem!important
 	}
 	.ml-md-2,
@@ -9607,7 +9610,7 @@ button.bg-dark:focus {
 		margin: 1rem!important
 	}
 	.mt-md-3,
-	.my-md-3 {
+	.-md-3 {
 		margin-top: 1rem!important
 	}
 	.mr-md-3,
@@ -9615,7 +9618,7 @@ button.bg-dark:focus {
 		margin-right: 1rem!important
 	}
 	.mb-md-3,
-	.my-md-3 {
+	.-md-3 {
 		margin-bottom: 1rem!important
 	}
 	.ml-md-3,
@@ -9626,7 +9629,7 @@ button.bg-dark:focus {
 		margin: 1.5rem!important
 	}
 	.mt-md-4,
-	.my-md-4 {
+	.-md-4 {
 		margin-top: 1.5rem!important
 	}
 	.mr-md-4,
@@ -9634,7 +9637,7 @@ button.bg-dark:focus {
 		margin-right: 1.5rem!important
 	}
 	.mb-md-4,
-	.my-md-4 {
+	.-md-4 {
 		margin-bottom: 1.5rem!important
 	}
 	.ml-md-4,
@@ -9645,7 +9648,7 @@ button.bg-dark:focus {
 		margin: 3rem!important
 	}
 	.mt-md-5,
-	.my-md-5 {
+	.-md-5 {
 		margin-top: 3rem!important
 	}
 	.mr-md-5,
@@ -9653,7 +9656,7 @@ button.bg-dark:focus {
 		margin-right: 3rem!important
 	}
 	.mb-md-5,
-	.my-md-5 {
+	.-md-5 {
 		margin-bottom: 3rem!important
 	}
 	.ml-md-5,
@@ -9778,7 +9781,7 @@ button.bg-dark:focus {
 		margin: -.25rem!important
 	}
 	.mt-md-n1,
-	.my-md-n1 {
+	.-md-n1 {
 		margin-top: -.25rem!important
 	}
 	.mr-md-n1,
@@ -9786,7 +9789,7 @@ button.bg-dark:focus {
 		margin-right: -.25rem!important
 	}
 	.mb-md-n1,
-	.my-md-n1 {
+	.-md-n1 {
 		margin-bottom: -.25rem!important
 	}
 	.ml-md-n1,
@@ -9797,7 +9800,7 @@ button.bg-dark:focus {
 		margin: -.5rem!important
 	}
 	.mt-md-n2,
-	.my-md-n2 {
+	.-md-n2 {
 		margin-top: -.5rem!important
 	}
 	.mr-md-n2,
@@ -9805,7 +9808,7 @@ button.bg-dark:focus {
 		margin-right: -.5rem!important
 	}
 	.mb-md-n2,
-	.my-md-n2 {
+	.-md-n2 {
 		margin-bottom: -.5rem!important
 	}
 	.ml-md-n2,
@@ -9816,7 +9819,7 @@ button.bg-dark:focus {
 		margin: -1rem!important
 	}
 	.mt-md-n3,
-	.my-md-n3 {
+	.-md-n3 {
 		margin-top: -1rem!important
 	}
 	.mr-md-n3,
@@ -9824,7 +9827,7 @@ button.bg-dark:focus {
 		margin-right: -1rem!important
 	}
 	.mb-md-n3,
-	.my-md-n3 {
+	.-md-n3 {
 		margin-bottom: -1rem!important
 	}
 	.ml-md-n3,
@@ -9835,7 +9838,7 @@ button.bg-dark:focus {
 		margin: -1.5rem!important
 	}
 	.mt-md-n4,
-	.my-md-n4 {
+	.-md-n4 {
 		margin-top: -1.5rem!important
 	}
 	.mr-md-n4,
@@ -9843,7 +9846,7 @@ button.bg-dark:focus {
 		margin-right: -1.5rem!important
 	}
 	.mb-md-n4,
-	.my-md-n4 {
+	.-md-n4 {
 		margin-bottom: -1.5rem!important
 	}
 	.ml-md-n4,
@@ -9854,7 +9857,7 @@ button.bg-dark:focus {
 		margin: -3rem!important
 	}
 	.mt-md-n5,
-	.my-md-n5 {
+	.-md-n5 {
 		margin-top: -3rem!important
 	}
 	.mr-md-n5,
@@ -9862,7 +9865,7 @@ button.bg-dark:focus {
 		margin-right: -3rem!important
 	}
 	.mb-md-n5,
-	.my-md-n5 {
+	.-md-n5 {
 		margin-bottom: -3rem!important
 	}
 	.ml-md-n5,
@@ -9873,7 +9876,7 @@ button.bg-dark:focus {
 		margin: auto!important
 	}
 	.mt-md-auto,
-	.my-md-auto {
+	.-md-auto {
 		margin-top: auto!important
 	}
 	.mr-md-auto,
@@ -9881,7 +9884,7 @@ button.bg-dark:focus {
 		margin-right: auto!important
 	}
 	.mb-md-auto,
-	.my-md-auto {
+	.-md-auto {
 		margin-bottom: auto!important
 	}
 	.ml-md-auto,
@@ -9895,7 +9898,7 @@ button.bg-dark:focus {
 		margin: 0!important
 	}
 	.mt-lg-0,
-	.my-lg-0 {
+	.-lg-0 {
 		margin-top: 0!important
 	}
 	.mr-lg-0,
@@ -9903,7 +9906,7 @@ button.bg-dark:focus {
 		margin-right: 0!important
 	}
 	.mb-lg-0,
-	.my-lg-0 {
+	.-lg-0 {
 		margin-bottom: 0!important
 	}
 	.ml-lg-0,
@@ -9914,7 +9917,7 @@ button.bg-dark:focus {
 		margin: .25rem!important
 	}
 	.mt-lg-1,
-	.my-lg-1 {
+	.-lg-1 {
 		margin-top: .25rem!important
 	}
 	.mr-lg-1,
@@ -9922,7 +9925,7 @@ button.bg-dark:focus {
 		margin-right: .25rem!important
 	}
 	.mb-lg-1,
-	.my-lg-1 {
+	.-lg-1 {
 		margin-bottom: .25rem!important
 	}
 	.ml-lg-1,
@@ -9933,7 +9936,7 @@ button.bg-dark:focus {
 		margin: .5rem!important
 	}
 	.mt-lg-2,
-	.my-lg-2 {
+	.-lg-2 {
 		margin-top: .5rem!important
 	}
 	.mr-lg-2,
@@ -9941,7 +9944,7 @@ button.bg-dark:focus {
 		margin-right: .5rem!important
 	}
 	.mb-lg-2,
-	.my-lg-2 {
+	.-lg-2 {
 		margin-bottom: .5rem!important
 	}
 	.ml-lg-2,
@@ -9952,7 +9955,7 @@ button.bg-dark:focus {
 		margin: 1rem!important
 	}
 	.mt-lg-3,
-	.my-lg-3 {
+	.-lg-3 {
 		margin-top: 1rem!important
 	}
 	.mr-lg-3,
@@ -9960,7 +9963,7 @@ button.bg-dark:focus {
 		margin-right: 1rem!important
 	}
 	.mb-lg-3,
-	.my-lg-3 {
+	.-lg-3 {
 		margin-bottom: 1rem!important
 	}
 	.ml-lg-3,
@@ -9971,7 +9974,7 @@ button.bg-dark:focus {
 		margin: 1.5rem!important
 	}
 	.mt-lg-4,
-	.my-lg-4 {
+	.-lg-4 {
 		margin-top: 1.5rem!important
 	}
 	.mr-lg-4,
@@ -9979,7 +9982,7 @@ button.bg-dark:focus {
 		margin-right: 1.5rem!important
 	}
 	.mb-lg-4,
-	.my-lg-4 {
+	.-lg-4 {
 		margin-bottom: 1.5rem!important
 	}
 	.ml-lg-4,
@@ -9990,7 +9993,7 @@ button.bg-dark:focus {
 		margin: 3rem!important
 	}
 	.mt-lg-5,
-	.my-lg-5 {
+	.-lg-5 {
 		margin-top: 3rem!important
 	}
 	.mr-lg-5,
@@ -9998,7 +10001,7 @@ button.bg-dark:focus {
 		margin-right: 3rem!important
 	}
 	.mb-lg-5,
-	.my-lg-5 {
+	.-lg-5 {
 		margin-bottom: 3rem!important
 	}
 	.ml-lg-5,
@@ -10123,7 +10126,7 @@ button.bg-dark:focus {
 		margin: -.25rem!important
 	}
 	.mt-lg-n1,
-	.my-lg-n1 {
+	.-lg-n1 {
 		margin-top: -.25rem!important
 	}
 	.mr-lg-n1,
@@ -10131,7 +10134,7 @@ button.bg-dark:focus {
 		margin-right: -.25rem!important
 	}
 	.mb-lg-n1,
-	.my-lg-n1 {
+	.-lg-n1 {
 		margin-bottom: -.25rem!important
 	}
 	.ml-lg-n1,
@@ -10142,7 +10145,7 @@ button.bg-dark:focus {
 		margin: -.5rem!important
 	}
 	.mt-lg-n2,
-	.my-lg-n2 {
+	.-lg-n2 {
 		margin-top: -.5rem!important
 	}
 	.mr-lg-n2,
@@ -10150,7 +10153,7 @@ button.bg-dark:focus {
 		margin-right: -.5rem!important
 	}
 	.mb-lg-n2,
-	.my-lg-n2 {
+	.-lg-n2 {
 		margin-bottom: -.5rem!important
 	}
 	.ml-lg-n2,
@@ -10161,7 +10164,7 @@ button.bg-dark:focus {
 		margin: -1rem!important
 	}
 	.mt-lg-n3,
-	.my-lg-n3 {
+	.-lg-n3 {
 		margin-top: -1rem!important
 	}
 	.mr-lg-n3,
@@ -10169,7 +10172,7 @@ button.bg-dark:focus {
 		margin-right: -1rem!important
 	}
 	.mb-lg-n3,
-	.my-lg-n3 {
+	.-lg-n3 {
 		margin-bottom: -1rem!important
 	}
 	.ml-lg-n3,
@@ -10180,7 +10183,7 @@ button.bg-dark:focus {
 		margin: -1.5rem!important
 	}
 	.mt-lg-n4,
-	.my-lg-n4 {
+	.-lg-n4 {
 		margin-top: -1.5rem!important
 	}
 	.mr-lg-n4,
@@ -10188,7 +10191,7 @@ button.bg-dark:focus {
 		margin-right: -1.5rem!important
 	}
 	.mb-lg-n4,
-	.my-lg-n4 {
+	.-lg-n4 {
 		margin-bottom: -1.5rem!important
 	}
 	.ml-lg-n4,
@@ -10199,7 +10202,7 @@ button.bg-dark:focus {
 		margin: -3rem!important
 	}
 	.mt-lg-n5,
-	.my-lg-n5 {
+	.-lg-n5 {
 		margin-top: -3rem!important
 	}
 	.mr-lg-n5,
@@ -10207,7 +10210,7 @@ button.bg-dark:focus {
 		margin-right: -3rem!important
 	}
 	.mb-lg-n5,
-	.my-lg-n5 {
+	.-lg-n5 {
 		margin-bottom: -3rem!important
 	}
 	.ml-lg-n5,
@@ -10218,7 +10221,7 @@ button.bg-dark:focus {
 		margin: auto!important
 	}
 	.mt-lg-auto,
-	.my-lg-auto {
+	.-lg-auto {
 		margin-top: auto!important
 	}
 	.mr-lg-auto,
@@ -10226,7 +10229,7 @@ button.bg-dark:focus {
 		margin-right: auto!important
 	}
 	.mb-lg-auto,
-	.my-lg-auto {
+	.-lg-auto {
 		margin-bottom: auto!important
 	}
 	.ml-lg-auto,
@@ -10240,7 +10243,7 @@ button.bg-dark:focus {
 		margin: 0!important
 	}
 	.mt-xl-0,
-	.my-xl-0 {
+	.-xl-0 {
 		margin-top: 0!important
 	}
 	.mr-xl-0,
@@ -10248,7 +10251,7 @@ button.bg-dark:focus {
 		margin-right: 0!important
 	}
 	.mb-xl-0,
-	.my-xl-0 {
+	.-xl-0 {
 		margin-bottom: 0!important
 	}
 	.ml-xl-0,
@@ -10259,7 +10262,7 @@ button.bg-dark:focus {
 		margin: .25rem!important
 	}
 	.mt-xl-1,
-	.my-xl-1 {
+	.-xl-1 {
 		margin-top: .25rem!important
 	}
 	.mr-xl-1,
@@ -10267,7 +10270,7 @@ button.bg-dark:focus {
 		margin-right: .25rem!important
 	}
 	.mb-xl-1,
-	.my-xl-1 {
+	.-xl-1 {
 		margin-bottom: .25rem!important
 	}
 	.ml-xl-1,
@@ -10278,7 +10281,7 @@ button.bg-dark:focus {
 		margin: .5rem!important
 	}
 	.mt-xl-2,
-	.my-xl-2 {
+	.-xl-2 {
 		margin-top: .5rem!important
 	}
 	.mr-xl-2,
@@ -10286,7 +10289,7 @@ button.bg-dark:focus {
 		margin-right: .5rem!important
 	}
 	.mb-xl-2,
-	.my-xl-2 {
+	.-xl-2 {
 		margin-bottom: .5rem!important
 	}
 	.ml-xl-2,
@@ -10297,7 +10300,7 @@ button.bg-dark:focus {
 		margin: 1rem!important
 	}
 	.mt-xl-3,
-	.my-xl-3 {
+	.-xl-3 {
 		margin-top: 1rem!important
 	}
 	.mr-xl-3,
@@ -10305,7 +10308,7 @@ button.bg-dark:focus {
 		margin-right: 1rem!important
 	}
 	.mb-xl-3,
-	.my-xl-3 {
+	.-xl-3 {
 		margin-bottom: 1rem!important
 	}
 	.ml-xl-3,
@@ -10316,7 +10319,7 @@ button.bg-dark:focus {
 		margin: 1.5rem!important
 	}
 	.mt-xl-4,
-	.my-xl-4 {
+	.-xl-4 {
 		margin-top: 1.5rem!important
 	}
 	.mr-xl-4,
@@ -10324,7 +10327,7 @@ button.bg-dark:focus {
 		margin-right: 1.5rem!important
 	}
 	.mb-xl-4,
-	.my-xl-4 {
+	.-xl-4 {
 		margin-bottom: 1.5rem!important
 	}
 	.ml-xl-4,
@@ -10335,7 +10338,7 @@ button.bg-dark:focus {
 		margin: 3rem!important
 	}
 	.mt-xl-5,
-	.my-xl-5 {
+	.-xl-5 {
 		margin-top: 3rem!important
 	}
 	.mr-xl-5,
@@ -10343,7 +10346,7 @@ button.bg-dark:focus {
 		margin-right: 3rem!important
 	}
 	.mb-xl-5,
-	.my-xl-5 {
+	.-xl-5 {
 		margin-bottom: 3rem!important
 	}
 	.ml-xl-5,
@@ -10468,7 +10471,7 @@ button.bg-dark:focus {
 		margin: -.25rem!important
 	}
 	.mt-xl-n1,
-	.my-xl-n1 {
+	.-xl-n1 {
 		margin-top: -.25rem!important
 	}
 	.mr-xl-n1,
@@ -10476,7 +10479,7 @@ button.bg-dark:focus {
 		margin-right: -.25rem!important
 	}
 	.mb-xl-n1,
-	.my-xl-n1 {
+	.-xl-n1 {
 		margin-bottom: -.25rem!important
 	}
 	.ml-xl-n1,
@@ -10487,7 +10490,7 @@ button.bg-dark:focus {
 		margin: -.5rem!important
 	}
 	.mt-xl-n2,
-	.my-xl-n2 {
+	.-xl-n2 {
 		margin-top: -.5rem!important
 	}
 	.mr-xl-n2,
@@ -10495,7 +10498,7 @@ button.bg-dark:focus {
 		margin-right: -.5rem!important
 	}
 	.mb-xl-n2,
-	.my-xl-n2 {
+	.-xl-n2 {
 		margin-bottom: -.5rem!important
 	}
 	.ml-xl-n2,
@@ -10506,7 +10509,7 @@ button.bg-dark:focus {
 		margin: -1rem!important
 	}
 	.mt-xl-n3,
-	.my-xl-n3 {
+	.-xl-n3 {
 		margin-top: -1rem!important
 	}
 	.mr-xl-n3,
@@ -10514,7 +10517,7 @@ button.bg-dark:focus {
 		margin-right: -1rem!important
 	}
 	.mb-xl-n3,
-	.my-xl-n3 {
+	.-xl-n3 {
 		margin-bottom: -1rem!important
 	}
 	.ml-xl-n3,
@@ -10525,7 +10528,7 @@ button.bg-dark:focus {
 		margin: -1.5rem!important
 	}
 	.mt-xl-n4,
-	.my-xl-n4 {
+	.-xl-n4 {
 		margin-top: -1.5rem!important
 	}
 	.mr-xl-n4,
@@ -10533,7 +10536,7 @@ button.bg-dark:focus {
 		margin-right: -1.5rem!important
 	}
 	.mb-xl-n4,
-	.my-xl-n4 {
+	.-xl-n4 {
 		margin-bottom: -1.5rem!important
 	}
 	.ml-xl-n4,
@@ -10544,7 +10547,7 @@ button.bg-dark:focus {
 		margin: -3rem!important
 	}
 	.mt-xl-n5,
-	.my-xl-n5 {
+	.-xl-n5 {
 		margin-top: -3rem!important
 	}
 	.mr-xl-n5,
@@ -10552,7 +10555,7 @@ button.bg-dark:focus {
 		margin-right: -3rem!important
 	}
 	.mb-xl-n5,
-	.my-xl-n5 {
+	.-xl-n5 {
 		margin-bottom: -3rem!important
 	}
 	.ml-xl-n5,
@@ -10563,7 +10566,7 @@ button.bg-dark:focus {
 		margin: auto!important
 	}
 	.mt-xl-auto,
-	.my-xl-auto {
+	.-xl-auto {
 		margin-top: auto!important
 	}
 	.mr-xl-auto,
@@ -10571,7 +10574,7 @@ button.bg-dark:focus {
 		margin-right: auto!important
 	}
 	.mb-xl-auto,
-	.my-xl-auto {
+	.-xl-auto {
 		margin-bottom: auto!important
 	}
 	.ml-xl-auto,
@@ -10856,7 +10859,7 @@ a.text-dark:focus {
 		widows: 3
 	}
 	h2,
-	h3 {
+	.mytext h3 {
 		page-break-after: avoid
 	}
 	@page {
@@ -10900,16 +10903,15 @@ a.text-dark:focus {
 	}
 }
 
-body {
+.mytext {
 	font-family: "Lato", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.8;
 	font-weight: normal;
-	background: #f8f9fd;
 	color: gray
 }
 
-a {
+.mytext a {
 	-webkit-transition: .3s all ease;
 	-o-transition: .3s all ease;
 	transition: .3s all ease;
@@ -10926,7 +10928,7 @@ a:focus {
 
 h1,
 h2,
-h3,
+.mytext h3,
 h4,
 h5,
 .h1,
@@ -10997,8 +10999,8 @@ h5,
 
 .login-wrap {
 	position: relative;
-	background: #fff h3;
-	background-font-weight: 300
+	background: #fff;
+	background-font-weight: 300;
 }
 
 .form-group {
@@ -11017,7 +11019,7 @@ h5,
 	color: gray
 }
 
-.form-control {
+.myform-control {
 	height: 48px;
 	background: #fff;
 	color: #000;
@@ -11028,24 +11030,24 @@ h5,
 	border: 1px solid rgba(0, 0, 0, .1)
 }
 
-.form-control::-webkit-input-placeholder {
+.myform-control::-webkit-input-placeholder {
 	color: rgba(0, 0, 0, .2)!important
 }
 
-.form-control::-moz-placeholder {
+.myform-control::-moz-placeholder {
 	color: rgba(0, 0, 0, .2)!important
 }
 
-.form-control:-ms-input-placeholder {
+.myform-control:-ms-input-placeholder {
 	color: rgba(0, 0, 0, .2)!important
 }
 
-.form-control:-moz-placeholder {
+.myform-control:-moz-placeholder {
 	color: rgba(0, 0, 0, .2)!important
 }
 
-.form-control:focus,
-.form-control:active {
+.myform-control:focus,
+.myform-control:active {
 	outline: none!important;
 	-webkit-box-shadow: none;
 	box-shadow: none;

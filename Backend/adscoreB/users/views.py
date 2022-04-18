@@ -52,7 +52,7 @@ def register(request):
 @login_required()
 @api_view(['POST'])
 def fillDetails(request):
-
+    print("------------------------")
     serializer=LoggedInSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(user_id=get_user(request))

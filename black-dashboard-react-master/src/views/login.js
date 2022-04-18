@@ -1,7 +1,10 @@
 
 import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import loginimg from '../assets/img/login.jpg'
+import '../assets/css/Login.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
 const Login=()=>{
     
     const [email,Setemail]=useState("")
@@ -44,38 +47,39 @@ const Login=()=>{
 
     return(
 
-        <div style={{backgroundColor:"#000C22"}} className="container-fluid">
+        <div style={{backgroundColor:"#000C22",height:'100vh'}} className="container-fluid">
             {errors === true&&<h2>cannot login with these credentials</h2>}
-        <section className="ftco-section">
-<div className="container">
+        <div className="ftco-section">
+<div className="container" style={{paddingTop:'2rem'}}>
 <div className="row justify-content-center">
 <div className="col-md-12 col-lg-10">
 <div className="wrap d-md-flex">
-<div className="img" style={{backgroundSize: 'cover',backgroundImage: loginimg}} >
+ {/* <img src={require("assets/img/login.jpg").default} className="Bg"/>  */}
+<div className="img" style={{backgroundSize: 'cover',backgroundImage:'url('+require("assets/img/login.jpg").default+ ')'}} >
 </div>
 <div className="login-wrap p-4 p-md-5">
 <div className="d-flex">
 <div className="w-100">
-<h3 className="mb-4">Sign In</h3>
+<h3 className="mb-4 mytext" style={{paddingTop:'0.9rem',fontSize:'20px'}}>Sign In</h3>
 </div>
 <div className="w-100">
-<p className="social-media d-flex justify-content-end">
-<a href="#" className="social-icon d-flex align-items-center justify-content-center"><span className="fa fa-facebook"></span></a>
-<a href="#" className="social-icon d-flex align-items-center justify-content-center"><span className="fa fa-twitter"></span></a>
+<p className="social-media d-flex justify-content-end mytext">
+<a href="#" className="social-icon d-flex align-items-center justify-content-center mytext"><span className="fa fa-facebook"></span></a>
+<a href="#" className="social-icon d-flex align-items-center justify-content-center mytext"><span className="fa fa-twitter"></span></a>
 </p>
 </div>
 </div>
 <form action="#" className="signin-form">
 <div className="form-group mb-3">
 <label className="label" htmlFor="email">Email</label>
-<input type="email" className="form-control" value={email} onChange={(e)=>Setemail(e.target.value)} placeholder="email" name="email" required/>
+<input type="email" className="myform-control" value={email} onChange={(e)=>Setemail(e.target.value)} placeholder="email" name="email" required/>
 </div>
 <div className="form-group mb-3">
 <label className="label" htmlFor="password">Password</label>
-<input type="password" className="form-control" value={password} onChange={(e)=>Setpassword(e.target.value)}placeholder="Password" name="password" required/>
+<input type="password" className="myform-control" value={password} onChange={(e)=>Setpassword(e.target.value)}placeholder="Password" name="password" required/>
 </div>
 <div className="form-group">
-<button type="submit" className="form-control btn btn-primary rounded submit px-3" onClick={login}>Sign In</button>
+<button type="submit" className="myform-control btn btn-primary rounded submit px-3 mytext" onClick={login} style={{fontSize:'16px'}}>Sign In</button>
 
 
 </div>
@@ -88,13 +92,13 @@ const Login=()=>{
 </div>
 </div>
 </form>
-<p className="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+<p className="text-center mytext" >Not a member? <a data-toggle="tab" href="#signup" className="mytext">Sign Up</a></p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section>
+</div>
     </div>
     )
 }

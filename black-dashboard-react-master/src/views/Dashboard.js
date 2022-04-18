@@ -212,15 +212,16 @@ function Dashboard(props) {
           <Col lg="4" style={{maxWidth:'25%'}}>
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Pie</h5>
+                <h5 className="card-category">Sentimental Analysis</h5>
                 <CardTitle tag="h3">
                   <i className="tim-icons icon-bell-55 text-info" /> 80.2%
                 </CardTitle>
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <chart1/>
-                </div>
+                 <Bar
+                    data={chartExample6.data}
+                    options={chartExample6.options}
+                  />
               </CardBody>
             </Card>
           </Col>

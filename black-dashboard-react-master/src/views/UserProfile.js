@@ -44,20 +44,20 @@ const ivrs=/^[N]{1}[0-9]{10}$/;
 const gst=/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 const upi=/^[\w.-]+@[\w.-]+$/;
 const NewValidationSchema=yup.object().shape({
-    // website:yup.string().matches(re,'URL is not valid'),
-    phone_no: yup.string().required().label("phone_no").matches(phoneRegExp, 'Phone number is not valid'),
-    pan_no: yup.string().required().label("pan_no").matches(pan, 'Pan number is not valid'),
-    udhyog_id: yup.number().required().label("udhyog_id").typeError('Must be a number').min(12, 'Must be exactly 12 digits').max(12, 'Must be exactly 12 digits'),
-    aadhar_no:yup.number().required().label("aadhar_no").min(12, 'Must be exactly 12 digits').max(12, 'Must be exactly 12 digits'),
-    ivrs_no:yup.string().required().label("ivrs_no").matches(ivrs, 'IVRS number is not valid'),
-    gst_no:yup.string().required().label("gst_no").matches(gst, 'GST number is not valid'),
-    upi_id:yup.string().required().label("upi_id").matches(upi, 'UPI Id is not valid'),
+    // // website:yup.string().matches(re,'URL is not valid'),
+    // phone_no: yup.string().required().label("phone_no").matches(phoneRegExp, 'Phone number is not valid'),
+    // pan_no: yup.string().required().label("pan_no").matches(pan, 'Pan number is not valid'),
+    // udhyog_id: yup.number().required().label("udhyog_id").typeError('Must be a number').min(12, 'Must be exactly 12 digits').max(12, 'Must be exactly 12 digits'),
+    // aadhar_no:yup.number().required().label("aadhar_no").min(12, 'Must be exactly 12 digits').max(12, 'Must be exactly 12 digits'),
+    // ivrs_no:yup.string().required().label("ivrs_no").matches(ivrs, 'IVRS number is not valid'),
+    // gst_no:yup.string().required().label("gst_no").matches(gst, 'GST number is not valid'),
+    // upi_id:yup.string().required().label("upi_id").matches(upi, 'UPI Id is not valid'),
     // zip_code:yup.number().label("zip_code").min(6, 'Must be exactly 6 digits').max(6, 'Must be exactly 6 digits'),
 })
 
 
 const HandlePost=(values)=>{
-  axios.post(BaseURL,values).then(res=>{
+  axios.post('http://127.0.0.1:8000/api/users/add/',values).then(res=>{
     if(res.status===200){
       console.log("done")
       window.location.replace('http://localhost:3000/admin/dashboard');
@@ -258,7 +258,7 @@ function UserProfile() {
                       className="avatar"
                       src={require("assets/img/emilyz.jpg").default}
                     />
-                    <h5 className="title">Mike Andrew</h5>
+                    <h5 className="title"></h5>
                   </a>
                   <p className="description">Ceo/Co-Founder</p>
                 </div>

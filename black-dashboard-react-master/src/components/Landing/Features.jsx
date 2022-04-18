@@ -10,21 +10,21 @@ function Features(){
       <h2>Features</h2>
     </div>
     <div className="row">
-      <div className="col-xs-6 col-md-3"><i className="fa fa-bell"></i>
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      <div className="col-xs-6 col-md-3"><i className="fa fa-laptop"></i>
+        <h3>Data Integration</h3>
+        <p>Collect alternative data from various sources</p>
       </div>
-      <div className="col-xs-6 col-md-3"><i className="fa fa-bullhorn"></i>
-        <h3>Dolor sit amet</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+      <div className="col-xs-6 col-md-3"><i className="fa fa-calculator"></i>
+        <h3>Data Analysis</h3>
+        <p>Analyse data to predict alternative score for user based on various parameters</p>
       </div>
-      <div className="col-xs-6 col-md-3"><i className="fa fa-user"></i>
-        <h3>Tempus eleifend</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      <div className="col-xs-6 col-md-3"><i className="fa fa-money"></i>
+        <h3>Credit Worthiness Assessment</h3>
+        <p>Let the lenders know your credit worthiness based on alternative data as an add-on to traditional score</p>
       </div>
       <div className="col-xs-6 col-md-3"><i className="fa fa-magic"></i>
-        <h3>Pellentesque</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+        <h3>Loan Policy Recommendation</h3>
+        <p>Recommend most suitable policy for user based on their current requirement and credit worthiness</p>
       </div>
     </div>
   </div>

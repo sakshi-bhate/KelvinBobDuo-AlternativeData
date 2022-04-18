@@ -12,7 +12,7 @@ function Testimonials(){
         <div className="testimonial">
           <div className="testimonial-image"><img src={require("./../../assets/img/james.jpg").default} alt="website template image"/></div>
           <div className="testimonial-content">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
+            <p>"Thanks to alternative credit scoring system, I was able to get loan to purchase equipments required for my store."</p>
             <div className="testimonial-meta">- John Doe</div>
           </div>
         </div>
@@ -21,7 +21,7 @@ function Testimonials(){
         <div className="testimonial">
           <div className="testimonial-image"><img src={require("./../../assets/img/mike.jpg").default} alt="website template image"/></div>
           <div className="testimonial-content">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis."</p>
+            <p>"Best credit score calculating experience with minimal information need and less time consuming"</p>
             <div className="testimonial-meta">- Johnathan Doe</div>
           </div>
         </div>
@@ -30,8 +30,8 @@ function Testimonials(){
         <div className="testimonial">
           <div className="testimonial-image"><img src={require("./../../assets/img/james.jpg").default} alt="website template image"/></div>
           <div className="testimonial-content">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
-            <div className="testimonial-meta">- John Doe</div>
+            <p>"Really smooth and efficient score calculating process."</p>
+            <div className="testimonial-meta">- Alex Warn</div>
           </div>
         </div>
       </div>

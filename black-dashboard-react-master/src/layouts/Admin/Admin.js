@@ -116,7 +116,7 @@ function Admin(props) {
               // toggleSidebar={toggleSidebar}
             /> */}
             <div className="main-panel" ref={mainPanelRef} data={color}>
-              { location.pathname === "/admin/landing-page" ? null : 
+              { (location.pathname === "/admin/landing-page") || (location.pathname === "/admin/login" ) || (location.pathname === "/admin/register" )? null : 
               <AdminNavbar
                 brandText={getBrandText(location.pathname)}
                 // toggleSidebar={toggleSidebar}
@@ -129,7 +129,7 @@ function Admin(props) {
               </Switch>
               {
                 // we don't want the Footer to be rendered on map page
-                (location.pathname === "/admin/maps" ) || (location.pathname === "/admin/landing-page") ? null : <Footer fluid />
+                (location.pathname === "/admin/maps" ) || (location.pathname === "/admin/landing-page") || (location.pathname === "/admin/login" ) || (location.pathname === "/admin/register" )? null : <Footer fluid />
               }
             </div>
 

@@ -3,9 +3,11 @@ import NavBar from './NavBar';
 import About from 'components/Landing/About';
 import Features from 'components/Landing/Features';
 import Testimonials from 'components/Landing/Testimonials';
+import Contact from 'components/Landing/Contact';
 
 import Container from 'react-bootstrap/Container';
 import 'assets/css/LandingPage.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
 function LandingPage(){
@@ -24,7 +26,7 @@ function LandingPage(){
         <About />
         <Features/>
         <Testimonials/>
-
+        <Contact/>
         </div>
         {/* <img src={require("assets/img/landing-img.png").default} style={{marginTop:'-1rem',marginLeft:'12rem'}}/>  */}
         </div>
