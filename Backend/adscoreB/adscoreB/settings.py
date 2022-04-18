@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-o@e^2bw*(5swdn5*xs#*^+o*mwlt$n5u=#ez8h5=_*i@_aabcm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kelvin-bob.herokuapp.com', '127.0.0.1:8000']
 
 
 # Application definition
@@ -168,3 +168,5 @@ REST_FRAMEWORK={
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
