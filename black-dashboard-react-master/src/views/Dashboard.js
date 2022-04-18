@@ -19,7 +19,7 @@ import React,{useEffect} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar, Doughnut } from "react-chartjs-2";
 import chart1 from "variables/chart1";
 import axios from 'axios'
 
@@ -52,6 +52,7 @@ import {
   chartExample4,
   chartExample5,
   chartExample6,
+   chartExample7,
 } from "variables/charts.js";
 
 const url="http://127.0.0.1:8000/api/users/trial"
@@ -73,7 +74,7 @@ function Dashboard(props) {
     <>
       <div className="content">
         <Row>
-          <Col xs="12">
+          <Col xs="12"style={{maxWidth:'80%'}} >
             <Card className="card-chart">
               <CardHeader>
                 <Row>
@@ -129,6 +130,24 @@ function Dashboard(props) {
                   <Line
                     data={chartExample1[bigChartData]}
                     options={chartExample1.options}
+                  />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col lg="6" style={{maxWidth:'20%'}}>
+            <Card className="card-chart">
+              <CardHeader>
+                <h5 className="card-category">Total Score</h5>
+                <CardTitle tag="h3">
+                  <i className="tim-icons icon-send text-success" /> 58%
+                </CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div className="chart-area">
+                  <Doughnut
+                    data={chartExample7.data}
+                    options={chartExample7.options}
                   />
                 </div>
               </CardBody>
@@ -225,6 +244,19 @@ function Dashboard(props) {
               </CardBody>
             </Card>
           </Col>
+          <Col lg="4" style={{maxWidth:'100%'}}>
+            <Card className="card-chart">
+              <CardHeader>
+                <h5 className="card-category">Credit Card Status</h5>
+                <CardTitle tag="h3">
+                 Eligible for Amex Credit Card
+                </CardTitle>
+              </CardHeader>
+              <CardBody style={{display:'flex',justifyContent:'center'}}>
+                  <i className="tim-icons icon-check-2" style={{color:'green',fontSize:'8rem'}} /> 
+              </CardBody>
+            </Card>
+          </Col>
         </Row>
         <Row>
           
@@ -273,6 +305,7 @@ function Dashboard(props) {
                 </div>
               </CardBody>
             </Card>
+
           
           
         </Row>

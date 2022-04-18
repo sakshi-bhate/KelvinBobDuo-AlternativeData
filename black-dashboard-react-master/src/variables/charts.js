@@ -584,11 +584,93 @@ let chartExample6 = {
   },
 };
 
+// -----------Example 7-----------
+
+let chartExample7 = {
+  data: (canvas) => {
+    let ctx = canvas.getContext("2d");
+    const width = canvas.width;
+    const height = canvas.height;
+    const radius = height / 2;
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(72,72,176,0.1)");
+    gradientStroke.addColorStop(0.4, "rgba(72,72,176,0.0)");
+    gradientStroke.addColorStop(0, "rgba(119,52,169,0)"); //purple colors
+
+    return {
+      labels: ["Traditional Score", "AD Score", "None"],
+      datasets: [
+        {
+          label: "Sentiment",
+          fill: true,
+          backgroundColor: ["#00D4B3", "#B6FAF0", "#EEE"],
+          hoverBackgroundColor: gradientStroke,
+          borderColor:["#00D4B3", "#B6FAF0", "#EEE"],
+          borderWidth: 0,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          data: [600,100,250],
+        },
+      ],
+    };
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false,
+    },
+    tooltips: {
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
+      bodySpacing: 2,
+      xPadding: 4,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+    },
+    cutoutPercentage: 75,
+    responsive: true,
+    // scales: {
+    //   yAxes: [
+    //     {
+    //       gridLines: {
+    //         drawBorder: false,
+    //         color: "rgba(225,78,202,0.1)",
+    //         zeroLineColor: "transparent",
+    //       },
+    //       ticks: {
+    //         suggestedMin: 0,
+    //         suggestedMax: 10,
+    //         padding: 20,
+    //         fontColor: "#9e9e9e",
+    //       },
+    //     },
+    //   ],
+    //   xAxes: [
+    //     {
+    //       gridLines: {
+    //         drawBorder: false,
+    //         color: "rgba(225,78,202,0.1)",
+    //         zeroLineColor: "transparent",
+    //       },
+    //       ticks: {
+    //         padding: 20,
+    //         fontColor: "#9e9e9e",
+    //       },
+    //     },
+    //   ],
+    // },
+  },
+};
+
 module.exports = {
   chartExample1, // in src/views/Dashboard.js
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js
   chartExample4,
   chartExample5,
-  chartExample6, // in src/views/Dashboard.js
+  chartExample6,
+  chartExample7, // in src/views/Dashboard.js
 };

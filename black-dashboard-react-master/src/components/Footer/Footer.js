@@ -28,30 +28,28 @@ function Footer() {
         <Nav>
           <NavItem>
             <NavLink href="https://www.creative-tim.com/?ref=bdr-user-archive-footer">
-              Creative Tim
+              Kelvin Bob
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.creative-tim.com/presentation?ref=bdr-user-archive-footer">
+            <NavLink href="#">
               About Us
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.creative-tim.com/blog?ref=bdr-user-archive-footer">
+            <NavLink href="#">
               Blog
             </NavLink>
           </NavItem>
         </Nav>
         <div className="copyright">
-          © {new Date().getFullYear()} made with{" "}
-          <i className="tim-icons icon-heart-2" /> by{" "}
+          © {new Date().getFullYear()}made by{" "}
           <a
-            href="https://www.creative-tim.com/?ref=bdr-user-archive-footer"
+            href="#"
             target="_blank"
           >
-            Creative Tim
+            Kelvin Bob
           </a>{" "}
-          for a better web.
         </div>
       </Container>
     </footer>
