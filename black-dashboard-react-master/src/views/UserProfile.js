@@ -258,7 +258,7 @@ function UserProfile() {
                       className="avatar"
                       src={require("assets/img/emilyz.jpg").default}
                     />
-                    <h5 className="title"></h5>
+                    <h5 className="title">Kiara Kapoor</h5>
                   </a>
                   <p className="description">Ceo/Co-Founder</p>
                 </div>

@@ -140,7 +140,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Total Score</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-send text-success" /> 58%
+                  <i className="tim-icons icon-send text-success" /> 646.42
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -160,7 +160,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Sales Points</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-bell-55 text-info" /> 80.2%
+                  <i className="tim-icons icon-bell-55 text-info" /> 100%
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -179,7 +179,7 @@ function Dashboard(props) {
                 <h5 className="card-category">Essential Bill Payments Score</h5>
                 <CardTitle tag="h3">
                   <i className="tim-icons icon-delivery-fast text-primary" />{" "}
-                  85%
+                  91.6%
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -197,7 +197,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Debt to Asset Ratio</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-send text-success" /> 58%
+                  <i className="tim-icons icon-send text-success" /> 100%
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -215,7 +215,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Default Payments Score</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-cart" style={{color:'#E4D00A'}} /> 77%
+                  <i className="tim-icons icon-cart" style={{color:'#E4D00A'}} /> 100%
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -233,7 +233,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Sentimental Analysis</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-bell-55 text-info" /> 80.2%
+                  <i className="tim-icons icon-bell-55 text-info" /> 44.6%
                 </CardTitle>
               </CardHeader>
               <CardBody>

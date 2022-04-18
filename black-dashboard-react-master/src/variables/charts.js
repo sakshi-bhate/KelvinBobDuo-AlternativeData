@@ -114,7 +114,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
+          data: [700, 560, 610, 520, 690, 490, 580, 610, 510, 480, 490, 550],
         },
       ],
     };
@@ -159,7 +159,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
+          data: [80, 78, 57, 69, 95 , 85, 80, 82, 76, 79, 87, 96],
         },
       ],
     };
@@ -448,7 +448,7 @@ const chartExample5 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [900, 2700, 6300, 1420, 870],
+          data: [900, 2700, 6300, 1420, 6200],
         },
       ],
     };
@@ -610,7 +610,7 @@ let chartExample7 = {
           borderWidth: 0,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [600,100,250],
+          data: [550,96,254],
         },
       ],
     };
