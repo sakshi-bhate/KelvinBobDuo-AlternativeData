@@ -230,9 +230,9 @@ function UserProfile() {
                 {/* <Button className="btn-fill" color="primary" type="submit">
                   Save
                 </Button> */}
-              <Button className="btn-fill" color="primary" type="submit" onClick={handleSubmit}>
+              <Link to="/dashboard"><Button className="btn-fill" color="primary" type="submit" onClick={handleSubmit}>
                   Calculate Score
-                </Button>
+                </Button></Link>
               </CardFooter>
             </Card>
           </Col>
@@ -251,7 +251,7 @@ function UserProfile() {
                       className="avatar"
                       src={require("assets/img/emilyz.jpg").default}
                     />
-                    <h5 className="title">Kiara Kapoor</h5>
+                    <h5 className="title">John Doe</h5>
                   </a>
                   <p className="description">Ceo/Co-Founder</p>
                 </div>
