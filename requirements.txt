@@ -6,4 +6,4 @@ gunicorn==19.7.1
 django-crispy-forms==1.14.0
 django-rest-auth>=0.3.3
 django-allauth==0.43.0
-
+django-cors-headers==3.11.0
