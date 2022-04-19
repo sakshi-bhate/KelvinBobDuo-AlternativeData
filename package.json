@@ -15,7 +15,7 @@
     "bootstrap": "4.5.3",
     "chart.js": "2.9.4",
     "classnames": "2.2.6",
-    "es6-spread-operator-practice": "file:../..",
+    // "es6-spread-operator-practice": "file:../..",
     "font-awesome": "^4.7.0",
     "formik": "^2.2.9",
     "node-sass": "4.14.1",
